@@ -164,7 +164,7 @@ Best-configuration training trajectory per (environment, algorithm) pair.
 
 ![Learning Curves](figures/learningcurves.png)
 
-- **PPO** curves are smoothest — clipped surrogate prevents policy catastrophes
+- **PPO** curves are smoothest - clipped surrogate prevents policy catastrophes
 - **DQN** plateaus early in `roundabout-v0` due to Q-overestimation in multi-agent states
 - **A2C** improves fastest early but shows highest variance throughout, especially in hard envs
 
