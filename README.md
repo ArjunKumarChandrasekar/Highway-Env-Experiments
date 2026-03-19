@@ -162,7 +162,7 @@ roundabout-v0  DQN              11.35
 
 Best-configuration training trajectory per (environment, algorithm) pair.
 
-![Learning Curves](figures/learning_curves_best.png)
+![Learning Curves](figures/learningcurves.png)
 
 - **PPO** curves are smoothest — clipped surrogate prevents policy catastrophes
 - **DQN** plateaus early in `roundabout-v0` due to Q-overestimation in multi-agent states
@@ -174,7 +174,7 @@ Best-configuration training trajectory per (environment, algorithm) pair.
 
 Box plots of `FinalReward` across all 27 hyperparameter configs per (env, algo).
 
-![Reward Distribution](figures/reward_distribution.png)
+![Reward Distribution](figures/RewardDistribution.png)
 
 - A2C has the **widest spread** — most sensitive to hyperparameter choice
 - PPO has the **tightest distribution** in `merge-v0` and `roundabout-v0` — most robust
@@ -184,7 +184,7 @@ Box plots of `FinalReward` across all 27 hyperparameter configs per (env, algo).
 
 ### 🎯 Effect of Gamma
 
-![Gamma Effect](figures/gamma_effect.png)
+![Gamma Effect](figures/EffectofDiscount.png)
 
 | γ | highway-v0 | merge-v0 | roundabout-v0 |
 |---|---|---|---|
@@ -198,7 +198,7 @@ At γ=0.90, a collision 15 steps away is weighted at `0.90^15 ≈ 0.21`. At γ=0
 
 ### 📉 Effect of Learning Rate
 
-![Learning Rate Effect](figures/lr_effect.png)
+![Learning Rate Effect](figures/EffectofLearningRate.png)
 
 | LR | Verdict |
 |---|---|
@@ -210,7 +210,7 @@ At γ=0.90, a collision 15 steps away is weighted at `0.90^15 ≈ 0.21`. At γ=0
 
 ### 🔢 Effect of Batch Size
 
-![Batch Size Effect](figures/batchsize_effect.png)
+![Batch Size Effect](figures/EffectofBatchSize.png)
 
 | Batch Size | DQN | PPO | A2C |
 |---|---|---|---|
@@ -224,7 +224,7 @@ At γ=0.90, a collision 15 steps away is weighted at `0.90^15 ≈ 0.21`. At γ=0
 
 Mean final reward per (algorithm × environment), averaged over all 27 configs.
 
-![Heatmap](figures/heatmap_reward.png)
+![Heatmap](figures/MeanFinalReward.png)
 
 | Algorithm | highway-v0 | merge-v0 | roundabout-v0 |
 |---|---|---|---|
@@ -236,7 +236,7 @@ Mean final reward per (algorithm × environment), averaged over all 27 configs.
 
 ### 💥 Crash Rate & Episode Length
 
-![Crash and Episode Length](figures/crash_eplen.png)
+![Crash and Episode Length](figures/MewanCrashRate.png)
 
 | Algorithm | highway-v0 | merge-v0 | roundabout-v0 |
 |---|---|---|---|
@@ -250,7 +250,7 @@ Crash rate nearly **doubles** from easy → hard. Even the best PPO crashes >41%
 
 ### 📉 Difficulty Scaling
 
-![Difficulty Effect](figures/difficulty_effect.png)
+![Difficulty Effect](figures/MFRvsED.png)
 
 | Algorithm | highway-v0 | roundabout-v0 | % Drop |
 |---|---|---|---|
@@ -262,7 +262,7 @@ Crash rate nearly **doubles** from easy → hard. Even the best PPO crashes >41%
 
 ### 🔗 Hyperparameter Correlation
 
-![Correlation Heatmap](figures/correlation_heatmap.png)
+![Correlation Heatmap](figures/PearsonCorrelation.png)
 
 - **Gamma × Reward:** ~+0.38 — strongest single predictor
 - **LogLR × Reward:** moderate positive
